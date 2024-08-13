@@ -1,0 +1,26 @@
+.main-content h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.shipping-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.option a {
+    display: block;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+.option a:hover {
+    background-color: #eee;
+    color: #333;
+}

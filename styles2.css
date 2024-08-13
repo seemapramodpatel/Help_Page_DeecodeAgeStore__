@@ -1,0 +1,487 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: rgb(25, 29, 32); /* Dark background for the entire body */
+    color: white; /* White text color */
+    margin: 0;
+    min-height: 100vh; /* Ensure body occupies full height */
+    display: flex; /* Use flexbox to align footer at the bottom */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+/* Header Styles */
+.header {
+    background-color: rgb(25, 29, 32); /* Dark background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    height: 80px; /* Increased height of the header */
+    border-bottom: 2px solid #222; /* Darker border for the header */
+    padding: 0 40px; /* Increased padding for the header */
+    position: sticky; /* Make header stick to the top */
+    top: 0; /* Position at the top */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+/* Main Content Styles */
+.main {
+    display: flex; /* Flex layout for sidebars and main content */
+    flex: 1; /* Allow main content to expand */
+    height: calc(100vh - 140px); /* Adjust height based on header and footer */
+}
+
+/* Left Sidebar Styles */
+.left-sidebar {
+    width: 25%; /* Left sidebar width */
+    background-color: rgb(25, 29, 32); /* Dark background */
+    padding: 20px; /* Existing padding */
+    height: 100%; /* Full height */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+
+
+
+
+
+
+
+/* Dropdown Menu Styles */
+/* Dropdown Menu Styles */
+.left-sidebar {
+    width: 25%;
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.dropdown {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.dropdown-menu > ul {
+    display: none;
+}
+
+.dropdown > .dropdown-toggle, .dropdown-toggle a,
+.dropdown-menu > .dropdown-toggle {
+    cursor: pointer;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.dropdown > .dropdown-toggle:hover,
+.dropdown-menu > .dropdown-toggle:hover {
+    background-color: #333;
+}
+
+.dropdown-menu > .dropdown-toggle {
+    border-left: solid 1px  #A0A0A0;
+    border-radius: 0px 5px 5px 0px;
+    border-width: 2px;
+    margin-bottom: 0px ;
+}
+
+.dropdown-menu > .dropdown-toggle:hover{
+    border-left: solid 1px #007bff;
+    border-radius: 0px 5px 5px 0px;
+    border-width: 2px;
+    margin-bottom: 0px ;
+}
+
+.dropdown-menu > .dropdown-toggle a:hover{
+    color: #007bff;
+}
+
+
+
+.dropdown > .dropdown-toggle .arrow,
+.dropdown-menu > .dropdown-toggle .arrow {
+    float: right;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-menu {
+    display: none;
+    list-style-type: none;
+    padding-left: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.dropdown-menu li {
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    color: white;
+    position: relative;
+}
+
+.dropdown > .dropdown-toggle a{
+    background-color: transparent;
+}
+.dropdown-menu li .arrow {
+    float: right;
+}
+
+.dropdown-menu li:hover {
+    background-color: #666;
+}
+
+/* Rotating the Arrow */
+.dropdown-toggle.active .arrow {
+    content: "\25BC"; /* Unicode for down arrow */
+    transform: rotate(0deg); /* Down arrow */
+}
+
+
+
+.dropdown-toggle a{
+    text-decoration: none;
+}
+
+
+
+/* Main Content Area */
+.main-content {
+    flex: 1; /* Take remaining space */
+    padding: 20px; /* Existing padding */
+    background-color: rgb(25, 29, 32); /* Dark background */
+}
+
+
+main-content h1 {
+    font-size: 2em;
+    font-weight: bolder;
+    margin-bottom: 0.5em;
+}
+
+.main-content h3 {
+    font-size: 1.5em;
+    font-weight: normal;
+    margin-bottom: 1em;
+}
+
+.main-content p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 1em;
+}
+
+.main-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.main-content ul li {
+    margin-bottom: 0.5em;
+}
+
+/* Right Sidebar Styles */
+.right-sidebar {
+    width: 20%; /* Right sidebar width */
+    background-color: rgb(25, 29, 32); /* Dark background */
+    padding: 20px; /* Existing padding */
+    height: 100%; /* Full height */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+.right-sidebar li{
+    list-style: none;
+    border-left: solid 1px  #A0A0A0;;
+    border-radius: 0px 5px 5px 0px;
+    border-width: 2px;
+    margin-bottom: 0px ;
+    padding: 5px;
+}
+
+
+.light-theme .right-sidebar li a{
+    text-decoration: none;
+    color:  rgb(25, 29, 32);
+}
+
+.dark-theme .right-sidebar li a{
+    text-decoration: none;
+    color: white;
+}
+.right-sidebar li:hover {
+    border-left: solid 1px #007bff;
+    border-radius: 0px 5px 5px 0px;
+    border-width: 2px;
+    margin-bottom: 0px ;
+}
+
+.right-sidebar li a{
+    text-decoration: none;
+    color:  white;
+}
+
+.right-sidebar li a:active{
+    text-decoration: none;
+    color:  #007bff;
+}
+
+
+/* right section */
+/* General styling for sections */
+section {
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid #ddd;
+}
+
+/* Default color for all sections */
+section {
+    background-color: #f0f0f0;
+}
+
+/* Styling for section 1 when active */
+section.section1.active {
+    background-color: #007bff;
+}
+
+/* Styling for section 2 when active */
+section.section2.active {
+    background-color: #007bff;
+}
+
+/* Styling for section 3 when active */
+section.section3.active {
+    background-color: #007bff;
+}
+
+
+
+
+/* Footer Styles */
+.footer {
+    background-color: rgb(31, 35, 37); /* Footer background */
+    display: flex;
+    justify-content: flex-end; /* Aligns the content to the right */
+    align-items: center;
+    height: 60px;
+    border-top: 2px solid #222; /* Darker border for the footer */
+    padding-right: 20px; /* Adds some padding on the right side */
+    padding-left: 20px; /* Added padding on the left side */
+}
+
+/* Theme Icon Styles */
+.theme-icon {
+    margin: 0 10px; /* Space between icons */
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.theme-icon:hover {
+    color: #ff5f87; /* Color change on hover */
+}
+
+/* Light Theme Styles */
+/* Light Theme Styles */
+.light-theme {
+    background-color: rgb(241, 245, 247); /* Light background for the entire body */
+    color: rgb(25, 29, 32); /* Dark text */
+}
+
+.light-theme .header, .light-theme .left-sidebar, .light-theme .right-sidebar, .light-theme .main-content {
+    background-color: rgb(241, 245, 247); /* Light theme colors for header and sidebars */
+    color: rgb(25, 29, 32); /* Dark text */
+}
+
+.light-theme .footer, .light-theme .dropdown-toggle {
+    background-color: rgb(224, 228, 230); /* Footer background for light theme */
+    color: rgb(25, 29, 32); /* Dark text for footer */
+}
+
+
+.light-theme .dropdown-toggle a{
+    background-color: rgb(224, 228, 230); /* Footer background for light theme */
+    color: rgb(25, 29, 32); /* Dark text for footer */
+}
+
+.light-theme .dropdown-menu, .light-theme .dropdown-menu li{
+    background-color: rgba(224, 228, 230, 0.692); /* Footer background for light theme */
+    color: rgb(25, 29, 32); /* Dark text for footer */
+}
+.light-theme .dropdown-menu:hover, .light-theme .dropdown-menu li:hover,
+.light-theme .dropdown > .dropdown-toggle:hover,
+.light-theme .dropdown-menu > .dropdown-toggle:hover{
+    background-color: rgba(224, 228, 230, 0.692); /* Footer background for light theme */
+    color: rgb(25, 29, 32); /* Dark text for footer */
+}
+
+.light-theme .help-text{
+    color: rgb(25, 29, 32); /* Dark text for footer */   
+}
+
+.light-theme  .search-container, .light-theme .option {
+    background-color: rgb(224, 228, 230); /* Footer background for light theme */
+    border: #888;
+}
+
+.dropdown-menu > .dropdown-toggle:hover{
+    color: #007bff;
+}
+
+.dropdown-menu > .dropdown-toggle a:hover{
+    color: #007bff;
+}
+.light-theme .option a{
+    color: #000;
+}
+
+.light-theme .header,
+.light-theme .footer {
+    border: 2px solid rgb(229, 233, 234); /* Set border color */
+}
+
+.dark-theme .dropdown > .dropdown-toggle >.arrow i {
+    color: white; /* Set the color of the icons to white */
+}
+
+.light-theme .dropdown > .dropdown-toggle >.arrow i {
+    color: rgb(25, 29, 32); /* Set the color of the icons to white */
+}
+
+/* Dark Theme Styles */
+.dark-theme {
+    background-color: rgb(25, 29, 32); /* Dark background */
+    color: white; /* Light text */
+}
+
+.dark-theme .header, .dark-theme .left-sidebar, .dark-theme .right-sidebar, .dark-theme {
+    background-color: rgb(25, 29, 32); /* Dark background */
+    color: white; /* Light text */
+}
+
+/* System Theme (default) */
+.system-theme {
+    background-color: rgb(25, 29, 32); /* Dark background */
+    color: white; /* Light text */
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888; /* Default color for scrollbar thumb */
+    border-radius: 10px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Darker color on hover */
+}
+
+/* Light Theme Scrollbar */
+.light-theme ::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Light color for scrollbar thumb in light theme */
+}
+
+.light-theme ::-webkit-scrollbar-thumb:hover {
+    background-color: #aaa; /* Lighter on hover in light theme */
+}
+
+/* Dark Theme Scrollbar */
+.dark-theme ::-webkit-scrollbar-thumb {
+    background-color: #444; /* Dark color for scrollbar thumb in dark theme */
+}
+
+.dark-theme ::-webkit-scrollbar-thumb:hover {
+    background-color: #666; /* Lighter on hover in dark theme */
+}
+
+/* Additional Reset and Basic Styles */
+.header-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #2C2C2C; /* Dark background */
+    padding: 10px 20px; /* Existing padding */
+    height: 60px;
+    border-bottom: 1px solid #444; /* Keep border same */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto; /* Pushes the logo to the left */
+}
+
+.logo img {
+    width: 30px;
+    height: auto;
+}
+
+.help-text {
+    color: white;
+    font-size: 18px;
+    margin-left: 8px;
+    font-weight:bolder;
+}
+
+.right-link a {
+    font-size: 16px;
+    color: #A0A0A0;
+    text-decoration: none;
+    margin-right: 20px; /* Space between the text and the search box */
+    font-weight:bolder;
+}
+
+.right-link a:hover {
+    text-decoration: none;
+}
+
+/* Search Box Styles */
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: rgb(31, 35, 37); /* Change to match body background */
+    padding: 10px; /* Existing padding */
+    border-radius: 8px;
+    border: 1px solid #333;
+    transition: background-color 0.3s ease;
+}
+
+.search-container:hover {
+    background-color: #555; /* Lighter on hover */
+}
+
+.search-container i {
+    font-size: 20px;
+    color: #cccccc91;
+    margin-right: 8px;
+}
+
+.search-container input {
+    background-color: transparent; /* Transparent background for input */
+    border: none; /* No border */
+    color: white; /* White text color */
+    outline: none; /* Remove outline */
+    font-size: 13px; /* Font size */
+    width: 110px;
+    margin-right: 8px; /* Space on right */
+}
+
+.search-container input::placeholder {
+    font-size: larger;
+    font-weight: bolder;
+    color: #cccccc91; /* Placeholder color */
+}
+
+.shortcut {
+    color: #888; /* Shortcut text color */
+    font-size: 11px; /* Font size */
+}

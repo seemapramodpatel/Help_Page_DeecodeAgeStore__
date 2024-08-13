@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Framed Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        function setTheme(theme) {
+            // Remove all themes
+            document.body.classList.remove('light-theme', 'dark-theme', 'system-theme'); 
+    
+            // Set the new theme
+            document.body.classList.add(theme);
+    
+            // Save the theme to local storage
+            localStorage.setItem('theme', theme);
+        }
+    
+        document.addEventListener("DOMContentLoaded", function () {
+            // Check local storage for a saved theme
+            const savedTheme = localStorage.getItem('theme');
+    
+            // Apply the saved theme if it exists
+            if (savedTheme) {
+                setTheme(savedTheme);
+            }
+        });
+    </script> 
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="media/image.jpg" alt="Help Logo">
+            <span class="help-text">help</span>
+        </div>
+        <div class="right-link">
+            <a href="https://www.youtube.com" target="_blank">Decode Age Store</a>
+        </div>
+        <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Ask or Search" >
+            <span class="shortcut">Ctrl + K</span>
+        </div>
+    </div>
+
+    <!-- <div class="main"> -->
+        <div class="main-content">
+            <h1>Decode Age Support</h1>
+            <div class="option-grid">
+                <div class="option"><a href="Shipping/Shipping.html">Shipping</a></div>
+                <div class="option"><a href="Refund/Refund.html">Refund</a></div>
+                <div class="option"><a href="Return and Exchange/Return and Exchange.html">Return and Exchange</a></div>
+                <div class="option"><a href="Pricing/Pricing.html">Pricing</a></div>
+                <div class="option"><a href="Quality & Certification/Quality & Certification.html">Quality & Certification</a></div>
+                <div class="option"><a href="Know about Side Effects/Know about Side Effects.html">Know about Side Effects</a></div>
+                <div class="option"><a href="Customer Support/Customer Support.html">Customer Support</a></div>
+                <div class="option"><a href="Health Condition/Health Condition.html">Health Condition</a></div>
+                <div class="option"><a href="Decode Biome (Gut Microbiome Test)/Decode Biome (Gut Microbiome Test).html">Decode Biome (Gut Microbiome Test)</a></div>
+                <div class="option"><a href="Supplement Information/Supplement Information.html">Supplement Information</a></div>
+                <div class="option"><a href="Frequently Asked Questions/Frequently Asked Questions.html">Frequently Asked Questions</a></div>
+            </div>
+        </div>
+    <!-- </div> -->
+
+        <div class="feedback-section">
+            <p>Was this helpful?</p>
+            <div class="feedback-icons">
+                <span class="feedback-icon">😃</span>
+                <span class="feedback-icon">😐</span>
+                <span class="feedback-icon">😔</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-icons">
+            <span class="theme-icon" id="light-theme" onclick="setTheme('light-theme');">
+                <i class="fas fa-sun"></i>
+            </span>
+            <span class="theme-icon active" id="system-theme" onclick="setTheme('system-theme');">
+                <i class="fas fa-desktop"></i>
+            </span>
+            <span class="theme-icon" id="dark-theme" onclick="setTheme('dark-theme');">
+                <i class="fas fa-moon"></i>
+            </span>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Framed Website</title>
+    <link rel="stylesheet" href="../styles2.css">
+    <link rel="stylesheet" href="../style_for_main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        function setTheme(theme) {
+            // Remove all themes
+            document.body.classList.remove('light-theme', 'dark-theme', 'system-theme'); 
+    
+            // Set the new theme
+            document.body.classList.add(theme);
+    
+            // Save the theme to local storage
+            localStorage.setItem('theme', theme);
+        }
+    
+        document.addEventListener("DOMContentLoaded", function () {
+            // Check local storage for a saved theme
+            const savedTheme = localStorage.getItem('theme');
+    
+            // Apply the saved theme if it exists
+            if (savedTheme) {
+                setTheme(savedTheme);
+            }
+        });
+        
+        function toggleDropdown(arrow) {
+            const dropdownMenu = arrow.parentElement.querySelector('.dropdown-menu');
+            
+            if (dropdownMenu.style.display === "block") {
+                dropdownMenu.style.display = "none";
+                arrow.innerHTML = '<i class="fas fa-chevron-right"></i>'; // Right arrow
+            } else {
+                dropdownMenu.style.display = "block";
+                arrow.innerHTML = '<i class="fas fa-chevron-down"></i>'; // Down arrow
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="../media/image.jpg" alt="Help Logo">
+            <span class="help-text">help</span>
+        </div>
+        <div class="right-link">
+            <a href="https://www.youtube.com" target="_blank">Decode Age Store</a>
+        </div>
+        <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Ask or Search" >
+            <span class="shortcut">Ctrl + K</span>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="left-sidebar">
+            <ul class="dropdown">
+                <li class="dropdown-toggle">
+                    <span><a href="../index.html">Decode Age Support</a></span>
+                    <span class="arrow" onclick="toggleDropdown(this)"><i class="fas fa-chevron-right"></i></span>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-toggle">
+                            <span><a href="../Shipping/Shipping.html">Shipping</a></span>
+                            <span class="arrow" onclick="toggleDropdown(this)"><i class="fas fa-chevron-right"></i></span>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-toggle">Cash on Delivery: How Does It Work at Decode Age?</li>
+                                <li class="dropdown-toggle">Is Free Shipping Really Free in Decode Age?</li>
+                                <li class="dropdown-toggle">Changing Your Order's Shipping Address at Decode Age</li>
+                                <li class="dropdown-toggle">How Do I Get My Money Back for Returns at Decode Age?</li>
+                                <li class="dropdown-toggle">Are Decode Age's Packing Materials Environmentally Friendly?</li>
+                                <li class="dropdown-toggle">What If My Decode Age Package is Missing?</li>
+                                <li class="dropdown-toggle">Can I Ship My Decode Age Order to an Address Different from My Profile?</li>
+                                <li class="dropdown-toggle">Are There Shipping Fees for My Decode Age Order?</li>
+                                <li class="dropdown-toggle">Does Decode Age Ship Orders Internationally?</li>
+                                <li class="dropdown-toggle">When Can I Expect My Decode Age Order to Arrive?</li>
+                                <li class="dropdown-toggle">Minimum Purchase Requirements at Decode Age</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-toggle">
+                            <span><a href="../Refund/Refund.html">Refund</a></span>
+                            <span class="arrow" onclick="toggleDropdown(this)"><i class="fas fa-chevron-right"></i></span>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-toggle">Not Sure About Your Purchase? Our 30-Day Return Guide</li>
+                                <li class="dropdown-toggle">What if I'm unsatisfied with an opened product?</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-toggle">
+                            <span><a href="../Return and Exchange/Return and Exchange.html">Return and Exchange</a></span>
+                            <span class="arrow" onclick="toggleDropdown(this)"><i class="fas fa-chevron-right"></i></span>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-toggle">Received Something Different? Here's How to Exchange It</li>
+                                <li class="dropdown-toggle">How Do I Exchange My Decode Age Product?</li>
+                                <li class="dropdown-toggle">Is it possible to return internationally shipped products?</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-toggle">
+                            <span><a href="../Pricing/Pricing.html">Pricing</a></span>
+                            <span class="arrow" onclick="toggleDropdown(this)"><i class="fas fa-chevron-right"></i></span>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-toggle">Pricing and Taxes on Your Decode Age Orders</li>
+                                <li class="dropdown-toggle">Why Are High-Quality Supplements from Decode Age More Expensive?</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-toggle">
+                            <span><a href="../Quality & Certification/Quality & Certification.html">Quality & Certification</a></span>
+                            <span class="arrow" onclick="toggleDropdown(this)"><i class="fas fa-chevron-right"></i></span>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-toggle">What is the significance of FDA registration for Decode Age?</li>
+                                <li class="dropdown-toggle">Why are all Decode Age supplements Pharmaceutical Grade?</li>
+                                <li class="dropdown-toggle"><a href="../Quality & Certification/sub1.html">What is the difference between Pharmaceutical and Nutraceutical Grade supplements?</a></li>
+                                <li class="dropdown-toggle">What is the Purity and Efficacy of Decode Age Supplement?</li>
+                                <li class="dropdown-toggle">What Certifications Do Your Decode Age Supplements Have?</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-toggle">
+                            <span><a href="../Know about Side Effects/Know about Side Effects.html">Know about Side Effects</a></span>
+                            <span class="arrow" onclick="toggleDropdown(this)"><i class="fas fa-chevron-right"></i></span>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-toggle">Are there any side effects to using Decode Age supplements?</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-toggle">
+                            <span><a href="../Customer Support/Customer Support.html">Customer Support</a></span>
+                            <span class="arrow" onclick="toggleDropdown(this)"><i class="fas fa-chevron-right"></i></span>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-toggle">Contact: How can I contact Customer Support for my queries?</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-toggle">
+                            <span><a href="../Health Condition/Health Condition.html">Health Condition</a></span>
+                            <span class="arrow" onclick="toggleDropdown(this)"><i class="fas fa-chevron-right"></i></span>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-toggle">What Supplements Help with Arthritis?</li>
+                                <li class="dropdown-toggle">The Potential of Decode Age Supplements for Managing Diabetes</li>
+                                <li class="dropdown-toggle">Which Supplements Help with Menopausal Symptoms?</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-toggle">
+                            <span><a href="../Decode Biome (Gut Microbiome Test)/Decode Biome (Gut Microbiome Test).html">Decode Biome (Gut Microbiome Test)</a></span>
+                            <span class="arrow" onclick="toggleDropdown(this)"><i class="fas fa-chevron-right"></i></span>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-toggle">What is Decode Biome Test?</li>
+                                <li class="dropdown-toggle">How to use Decode Biome Test</li>
+                                <li class="dropdown-toggle">Who Can Benefit from a Gut Microbiome Test?</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-toggle">
+                            <span><a href="../Supplement Information/Supplement Information.html">Supplement Information</a></span>
+                            <span class="arrow" onclick="toggleDropdown(this)"><i class="fas fa-chevron-right"></i></span>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-toggle">NMN Supplement
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-toggle">What are the benefits of NMN Supplement?</li>
+                                        <li class="dropdown-toggle">What is NMN (Nicotinamide Mononucleotide) and how does it work?</li>
+                                        <li class="dropdown-toggle">Why and How to Choose the Right NMN Supplement</li>
+                                        <li class="dropdown-toggle">Can I Take NMN? Understanding Dosage and Guidelines</li>
+                                        <li class="dropdown-toggle">Why Choose Uthever® NMN Over Regular NMN?</li>
+                                        <li class="dropdown-toggle">NMN Powder vs NMN Capsules: Which Is Best for Longevity?</li>
+                                        <li class="dropdown-toggle">NMN Powder Detailed Benefits</li>
+                                        <li class="dropdown-toggle">Is Beta or 'β' NMN the same as NMN?</li>
+                                        <li class="dropdown-toggle">Benefits and Convenience with NMN Capsules</li>
+                                        <li class="dropdown-toggle">Taking NMN While Fasting: Does It Work? A Guide to Benefits & Usage</li>
+                                        <li class="dropdown-toggle">Difference Between NMN and LongeVit. Do I need to take both?</li>
+                                        <li class="dropdown-toggle">Does NMN Increase Testosterone Levels?</li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-toggle">LongeVit Supplement
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-toggle">How is LongeVit Best selection for NMN User?</li>
+                                        <li class="dropdown-toggle">Can I consume LongeVit? Understanding Dosages and Guidelines</li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-toggle">Trans Resveratrol Supplement
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-toggle">Japanese Knotweed: Benefits and Uses Explained</li>
+                                        <li class="dropdown-toggle">Difference Between Trans-Resveratrol and ResVit</li>
+                                        <li class="dropdown-toggle">Can I Take Trans Resveratrol? Understanding Dosage and Guidelines</li>
+                                        <li class="dropdown-toggle">What is Trans- Resveratrol? And how does it work?</li>
+                                        <li class="dropdown-toggle">What are the Benefits of Trans-Resveratrol Supplement?</li>
+                                    </ul>
+                                </li>
+                                </li>
+                                <li class="dropdown-toggle">Ca-AKG Supplement
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-toggle">Difference between AKG, Ca-AKG, and AAKG and Why Ca-AKG Stands Out?</li>
+                                        <li class="dropdown-toggle">What is Ca-AKG (Calcium Alpha-Ketoglutarate) and how does it work?</li>
+                                        <li class="dropdown-toggle">Can I take Ca-AKG? Understanding Dosages and Guidelines</li>
+                                        <li class="dropdown-toggle">How does Ca-AKG supplementation reduce biological age?</li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-toggle">Spermidine Supplement
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-toggle">What is Spermidine? How does it work?</li>
+                                        <li class="dropdown-toggle">Can I take Spermidine? Understanding Dosage and Guidelines</li>
+                                        <li class="dropdown-toggle">What is Autophagy?</li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-toggle">TMG Supplement
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-toggle">What are the benefits of taking TMG supplements?</li>
+                                        <li class="dropdown-toggle">Can I consume TMG? Understanding Dosages and Guidelines</li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-toggle">Trans Pterostilbene Supplement
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-toggle">What is Trans Pterostilbene? How does it work?</li>
+                                        <li class="dropdown-toggle">Can I take Trans-Pterostilbene? Understanding Dosage and Guidelines</li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-toggle">Quercetin Supplement
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-toggle">What is Quercetin? How Does it work?</li>
+                                        <li class="dropdown-toggle">Can I take Quercetin? Understanding Dosages and Guidelines</li>
+                                        <li class="dropdown-toggle">What are the benefits of Quercetin?</li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-toggle">Fisetin Supplement
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-toggle">What is Fisetin? How does it work?</li>
+                                        <li class="dropdown-toggle">Can I Take Fisetin? Understanding Dosage and Guidelines</li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-toggle">SeneVit Supplement
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-toggle">What is SeneVit? How does it work?</li>
+                                        <li class="dropdown-toggle">Can I Take SeneVit? Understanding Dosage and Guidelines</li>
+                                        <li class="dropdown-toggle">Should I take SeneVit instead of Fisetin and Quercetin?</li>
+                                    </ul>
+                                </li>
+                                </li>
+                                <li class="dropdown-toggle">SportVit Supplement
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-toggle">What is SportVit? Why is the best Pre-workout?</li>
+                                        <li class="dropdown-toggle">Can I Take SportVit? Understanding Dosage and Guidelines</li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-toggle">ResVit Supplement
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-toggle">What is ResVit?</li>
+                                        <li class="dropdown-toggle">Can I take ResVit? Understanding Dosages and Guidelines</li>
+                                        <li class="dropdown-toggle">Should I Take ResVit Instead of Trans-Resveratrol and Trans-Pterostilbene?</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-toggle">
+                            <span><a href="../Frequently Asked Questions/Frequently Asked Questions.html">Frequently Asked Questions</a></span>
+                            <span class="arrow" onclick="toggleDropdown(this)"><i class="fas fa-chevron-right"></i></span>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-toggle">Decode Age on Shark Tank</li>
+                                <li class="dropdown-toggle">What Supplement should I start with?</li>
+                                <li class="dropdown-toggle">Decode Age Portfolio</li>
+                                <li class="dropdown-toggle">Decode Age External Links</li>
+                                <li class="dropdown-toggle">Storing Decode Age Supplements: Tips and Recommendations</li>
+                                <li class="dropdown-toggle">Space Travel and Its Impact on Astronauts' Bone Health</li>
+                                <li class="dropdown-toggle">Decoding Sirtuins and NAD connection</li>
+                                <li class="dropdown-toggle">What if I have a reaction to one of your products?</li>
+                                <li class="dropdown-toggle">Who can take these supplements?</li>
+                                <li class="dropdown-toggle">What Is Shelf Life for Decode Age Products?</li>
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        
+
+        
+        <div class="main-content" id="section1">
+            <h1>Frequently Asked Questions</h1>
+            <div class="shipping-options">
+                <div class="option">
+                    <a href="#">Decode Age on Shark Tank</a>
+                </div>
+                <div class="option">
+                    <a href="#">What Supplement should I start with?</a>
+                </div>
+                <div class="option">
+                    <a href="#">Decode Age Portfolio</a>
+                </div>
+                <div class="option">
+                    <a href="#">Decode Age External Links</a>
+                </div>                
+                <div class="option">
+                    <a href="#">Storing Decode Age Supplements: Tips and Recommendations</a>
+                </div>                
+                <div class="option">
+                    <a href="#">Space Travel and Its Impact on Astronauts' Bone Health</a>
+                </div>                
+                <div class="option">
+                    <a href="#">Decoding Sirtuins and NAD connection</a>
+                </div>                
+                <div class="option">
+                    <a href="#">What if I have a reaction to one of your products?</a>
+                </div>                
+                <div class="option">
+                    <a href="#">Who can take these supplements?</a>
+                </div>                
+                <div class="option">
+                    <a href="#">What Is Shelf Life for Decode Age Products?</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="right-sidebar">
+            <ul>
+                <li><a href="#section1">Nothing to here</a></li>
+                <li><a href="#section2">Nothing to here</a></li>
+                <li><a href="#section3">Nothing to here</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-icons">
+            <span class="theme-icon" id="light-theme" onclick="setTheme('light-theme');">
+                <i class="fas fa-sun"></i>
+            </span>
+            <span class="theme-icon active" id="system-theme" onclick="setTheme('system-theme');">
+                <i class="fas fa-desktop"></i>
+            </span>
+            <span class="theme-icon" id="dark-theme" onclick="setTheme('dark-theme');">
+                <i class="fas fa-moon"></i>
+            </span>
+        </div>
+    </div>
+</body>
+</html>
